@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_Middler" Id="{e2f7e50e-41ca-4fe3-a2ee-819ec6e71f1d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Middler EXTENDS FB_Parameters_Base
+VAR
+	inner	: FB_Inner(THIS^);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

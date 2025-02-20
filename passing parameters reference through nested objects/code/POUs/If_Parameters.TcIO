@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <Itf Name="If_Parameters" Id="{992d696a-cb09-44dd-8546-b18a5a1eeee3}">
+    <Declaration><![CDATA[INTERFACE If_Parameters]]></Declaration>
+    <Property Name="Par" Id="{bc6e99ad-5d59-496f-a8dc-a1d3efdbedb7}">
+      <Declaration><![CDATA[PROPERTY Par : REFERENCE TO dt_Parameters]]></Declaration>
+      <Get Name="Get" Id="{c02b2cab-888c-4985-a0bc-f4dd54aaca49}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>

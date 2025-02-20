@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_Parameters_Base" Id="{0bb1bfca-93e7-4a52-82a4-044221c3d79a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ABSTRACT FB_Parameters_Base IMPLEMENTS If_Parameters
+VAR
+	_par_ref_for_inner_use	: REFERENCE TO dt_parameters;
+	_init_index				: UINT; //intialization order track
+END_VAR
+VAR_STAT
+	_next_init_index		: UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{12107d90-3f26-4b99-9581-0a411bc7378a}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	iParameters : If_Parameters;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+_par_ref_for_inner_use REF= iParameters.Par;
+
+_init_index := _next_init_index;
+_next_init_index := _next_init_index + 1;
+]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Par" Id="{a6af7242-5572-44b7-a9c4-77abcaf50c9c}">
+      <Declaration><![CDATA[PROPERTY Par : REFERENCE TO dt_Parameters
+]]></Declaration>
+      <Get Name="Get" Id="{538cb537-659a-412d-aa14-f1b5de618fe9}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[
+Par REF= _par_ref_for_inner_use;
+]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+  </POU>
+</TcPlcObject>

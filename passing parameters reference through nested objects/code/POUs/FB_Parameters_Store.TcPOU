@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_Parameters_Store" Id="{e50436de-36d4-4612-b3d9-7a590fd3e2fa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Parameters_Store IMPLEMENTS If_Parameters
+VAR_INPUT PERSISTENT
+	Pars	: dt_Parameters;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Par" Id="{b6299f29-3fb6-4083-a3f4-610d1f2debc8}">
+      <Declaration><![CDATA[PROPERTY Par : REFERENCE TO dt_Parameters
+]]></Declaration>
+      <Get Name="Get" Id="{51efd108-ddcc-489a-89ac-2aeadb0557a7}">
+        <Declaration><![CDATA[]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[
+Par REF= Pars;
+]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+  </POU>
+</TcPlcObject>

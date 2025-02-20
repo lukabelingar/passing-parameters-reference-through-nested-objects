@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="Parameters" Id="{164fc1b2-9a73-4d71-8048-3d5a2e151eec}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Parameters	: FB_Parameters_Store	:= (Pars := (
+											Scale := 3.14,
+											Etc := 42
+										));
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

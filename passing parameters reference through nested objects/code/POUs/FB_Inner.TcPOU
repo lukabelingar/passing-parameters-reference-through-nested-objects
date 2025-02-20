@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_Inner" Id="{d9bab9b1-2802-4e38-91a3-b8cf1d5ce674}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Inner EXTENDS FB_Parameters_Base
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
